@@ -1,0 +1,18 @@
+﻿namespace CampSleepAway_AntonAsplund.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class _2ndTryDay2 : DbMigration
+    {
+        public override void Up()
+        {
+            DropIndex("dbo.Cabins", "IX_CounselorUniqueSSN");
+        }
+        
+        public override void Down()
+        {
+            CreateIndex("dbo.Cabins", "CounselorID", unique: true, name: "IX_CounselorUniqueSSN");
+        }
+    }
+}
