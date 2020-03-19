@@ -25,5 +25,7 @@ namespace CampSleepAway_AntonAsplund
 
         [Index("IX_CounselorUniqueSSN", IsUnique = true)]
         public int SocialSecurityNumber { get; set; }
+
+        public virtual Cabin Cabin { get; set; }
     }
 }

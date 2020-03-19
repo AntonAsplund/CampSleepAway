@@ -171,8 +171,7 @@ namespace CampSleepAway_AntonAsplund
                         Console.WriteLine($"{counselor.LastNAme}");
                         try
                         {
-                            var cabinsCounselor = db.CabinsCounselors.Where(CC => CC.CounselorID == counselor.CounselorID).FirstOrDefault<CabinsCounselor>();
-                            Console.WriteLine($"Cabin number: {db.Cabins.Where(C => C.CabinID == cabinsCounselor.CabinID).FirstOrDefault<Cabin>().CabinNumber}");
+                            Console.WriteLine($"Cabin number: {counselor.Cabin.CabinNumber}");
                         }
                         catch 
                         {
@@ -297,26 +296,13 @@ namespace CampSleepAway_AntonAsplund
             Console.WriteLine($"Lastname: {counselor.LastNAme}");
             Console.WriteLine($"Phone number: {counselor.PhoneNumber}");
             Console.WriteLine($"SSN: {counselor.SocialSecurityNumber}");
-            using (var db = new CampSleepAwayContext())
+            if (counselor.Cabin != null)
             {
-                try
-                {
-                    var cabinCounselor = db.CabinsCounselors.Where(CC => CC.CounselorID == counselor.CounselorID).FirstOrDefault<CabinsCounselor>();
-                    var cabin = db.Cabins.Where(C => C.CabinID == cabinCounselor.CabinID).FirstOrDefault<Cabin>();
-
-                    if (cabin != null)
-                    {
-                        Console.WriteLine($"Cabin number: {cabin.CabinNumber}");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Cabin number: Counselor is assigned to no cabin");
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("Cabin number: Counselor is not assigned to any cabin");
-                }
+                Console.WriteLine($"Cabin number: {counselor.Cabin.CabinNumber}");
+            }
+            else
+            {
+                Console.WriteLine("Cabin number: Counselor is assigned to no cabin");
             }
         }
 

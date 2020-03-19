@@ -76,10 +76,7 @@ namespace CampSleepAway_AntonAsplund
             {
                 using (var db = new CampSleepAwayContext())
                 {
-                    var cabinsCounselor = db.CabinsCounselors.Where(CC => CC.CounselorID == counselor.CounselorID).FirstOrDefault<CabinsCounselor>();
-
-                    counselorHistory.CabinID = cabinsCounselor.CabinID;
-
+                    counselorHistory.CabinID = counselor.Cabin.CabinID;
                 }
 
             }

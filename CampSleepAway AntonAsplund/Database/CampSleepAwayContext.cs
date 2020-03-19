@@ -25,7 +25,6 @@ namespace CampSleepAway_AntonAsplund.Database
         public DbSet<NextOfKinHistory> NextOfKinHistories { get; set; }
 
         public DbSet<NextOfKinCheckInCheckOut> NextOfKinCheckInCheckOuts { get; set; }
-        public DbSet<CabinsCounselor> CabinsCounselors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,12 +36,15 @@ namespace CampSleepAway_AntonAsplund.Database
             modelBuilder.Entity<NextOfKin>()
                 .Property(N => N.CamperID)
                 .IsRequired();
-            modelBuilder.Entity<CabinsCounselor>()
-                .Property(CC => CC.CabinID)
-                .IsRequired();
-            modelBuilder.Entity<CabinsCounselor>()
-                .Property(CC => CC.CounselorID)
-                .IsRequired();
+
+            modelBuilder.Entity<Cabin>()
+                .HasOptional(C => C.Counselor)
+                .WithOptionalDependent();
+
+            modelBuilder.Entity<Counselor>()
+                .HasOptional(C => C.Cabin)
+                .WithOptionalDependent();
+
         }
 
 

@@ -677,17 +677,18 @@ namespace CampSleepAway_AntonAsplund
                                 case 1:
                                     {
                                         var counselor = UserInputs.GetACounselorToAdd();
-                                        int cabinIDToAddCounselorTo = 0;
                                         int cabinNumberToAddCounselorTo = 0;
 
                                         using (var db = new CampSleepAwayContext())
                                         {
                                             try
                                             {
-                                                var cabin = db.Cabins.Where(C => !db.CabinsCounselors.Select(CC => CC.CabinID).Contains(C.CabinID)).ToList();
+                                                var cabin = db.Cabins.Where(C => C.Counselor == null).FirstOrDefault();
 
-                                                cabinIDToAddCounselorTo = cabin[0].CabinID;
-                                                cabinNumberToAddCounselorTo = cabin[0].CabinNumber;
+                                                cabin.Counselor = counselor;
+                                                counselor.Cabin = cabin;
+                                                cabinNumberToAddCounselorTo = cabin.CabinNumber;
+                                                
                                             }
                                             catch
                                             {
@@ -695,8 +696,6 @@ namespace CampSleepAway_AntonAsplund
                                                 break;
                                             }
 
-                                            db.CabinsCounselors.Add(new CabinsCounselor() { CabinID = cabinIDToAddCounselorTo, CounselorID = counselor.CounselorID});
-                                            db.Counselors.Add(counselor);
                                             try
                                             {
                                                 db.SaveChanges();
@@ -848,40 +847,29 @@ namespace CampSleepAway_AntonAsplund
                                                         {
                                                             var cabinToAssginCounselorTo = db.Cabins.Where(C => C.CabinNumber == userAssignCounselorToCabinNumberChoice).FirstOrDefault<Cabin>();
 
-                                                            try
+                                                            if(cabinToAssginCounselorTo.Counselor == null)
                                                             {
-                                                                var cabinsCounselor = db.CabinsCounselors.Where(CC => CC.CabinID == cabinToAssginCounselorTo.CabinID).FirstOrDefault<CabinsCounselor>();
+
+                                                                cabinToAssginCounselorTo.Counselor = counselorToUpdate;
+                                                                counselorToUpdate.Cabin = cabinToAssginCounselorTo;
+                                                                db.SaveChanges();
                                                                 
                                                             }
-                                                            catch
+                                                            else
                                                             {
                                                                 Console.WriteLine("The cabin is already occupied");
                                                                 break;
                                                             }
 
-                                                            var cabinsCounselorToRemove = db.CabinsCounselors.Where(CC => CC.CounselorID == counselorToUpdate.CounselorID).FirstOrDefault<CabinsCounselor>();
-
                                                             var counselorHistory = HelpMethods.GetACounselorHistory(counselorToUpdate);
 
-                                                            try
-                                                            {
-                                                                db.CabinsCounselors.Remove(cabinsCounselorToRemove);
-                                                            }
-                                                            catch
-                                                            { 
-                                                            
-                                                            }
-
                                                             db.CounselorHistories.Add(counselorHistory);
-                                                            db.SaveChanges();
-
-                                                            db.CabinsCounselors.Add(new CabinsCounselor() { Cabin = cabinToAssginCounselorTo, Counselor = counselorToUpdate });
                                                             db.SaveChanges();
 
                                                         }
                                                         catch
                                                         {
-                                                            Console.WriteLine("Error when acesssing database, is the cabin occupied or nonexsisting? Please contact support if the problem persists");
+                                                            Console.WriteLine("Error when acesssing database, or is it nonexsisting? Please contact support if the problem persists");
                                                         }
 
 
@@ -893,14 +881,13 @@ namespace CampSleepAway_AntonAsplund
 
                                                         try
                                                         {
-                                                            var cabinsCounselor = db.CabinsCounselors.Where(CC => CC.CounselorID == counselorToUpdate.CounselorID).FirstOrDefault<CabinsCounselor>();
-
+                                                            
                                                             var counselorHistory = HelpMethods.GetACounselorHistory(counselorToUpdate);
 
-                                                            db.CounselorHistories.Add(counselorHistory);
-                                                            db.SaveChanges();
+                                                            counselorToUpdate.Cabin.Counselor = null;
+                                                            counselorToUpdate.Cabin = null;
 
-                                                            db.CabinsCounselors.Remove(cabinsCounselor);
+                                                            db.CounselorHistories.Add(counselorHistory);
                                                             db.SaveChanges();
                                                         }
                                                         catch
@@ -926,15 +913,11 @@ namespace CampSleepAway_AntonAsplund
                                             {
                                                 case 1:
                                                     {
-                                                        var cabinsCounselor = db.CabinsCounselors.Where(CC => CC.CounselorID == counselorToUpdate.CounselorID).FirstOrDefault<CabinsCounselor>();
 
                                                         var counselorHistory = HelpMethods.GetACounselorHistory(counselorToUpdate);
-
-                                                        counselorHistory.CabinID = null;
                                                         
                                                         try
                                                         {
-                                                            db.CabinsCounselors.Remove(cabinsCounselor);
                                                             db.Counselors.Remove(counselorToUpdate);
                                                             db.SaveChanges();
                                                         }
@@ -1032,27 +1015,7 @@ namespace CampSleepAway_AntonAsplund
                 db.SaveChanges();
             }
 
-            Console.WriteLine("Adding Campers to Cabin");
-            using (var db = new CampSleepAwayContext())
-            {
-                var camper = db.Campers.FirstOrDefault(C => C.FirstName == "Hugo");
-                var camper2 = db.Campers.FirstOrDefault(C => C.FirstName == "Stina");
-
-                var cabin = db.Cabins.FirstOrDefault(C => C.CabinNumber == 1);
-
-                cabin.FreeCamperBunks += (-1);
-                camper.CabinID = cabin.CabinID;
-                cabin.FreeCamperBunks += (-1);
-                camper2.CabinID = cabin.CabinID;
-
-                var cabinCounselor = new CabinsCounselor();
-                cabinCounselor.CounselorID = db.Counselors.FirstOrDefault(C => C.FirstName == "Anton").CounselorID;
-                cabinCounselor.CabinID = cabin.CabinID;
-
-                db.CabinsCounselors.Add(cabinCounselor);
-
-                db.SaveChanges();
-            }
+           
 
             Console.WriteLine("Testing new stuff");
             using (var db = new CampSleepAwayContext())

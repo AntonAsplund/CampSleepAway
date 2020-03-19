@@ -30,6 +30,7 @@ namespace CampSleepAway_AntonAsplund
 
         //Camper navigational propertys and FK
         public virtual ICollection<Camper> Campers { get; set; }
+        public virtual Counselor Counselor { get; set; }
 
     }   
 }

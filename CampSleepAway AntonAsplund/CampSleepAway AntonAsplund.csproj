@@ -55,7 +55,6 @@
   <ItemGroup>
     <Compile Include="CampSleepAwayMain.cs" />
     <Compile Include="Database\Cabin.cs" />
-    <Compile Include="Database\CabinsCounselor.cs" />
     <Compile Include="Database\Camper.cs" />
     <Compile Include="Database\CamperHistory.cs" />
     <Compile Include="Database\CampSleepAwayContext.cs" />
@@ -65,146 +64,6 @@
     <Compile Include="Database\NextOfKinCheckInCheckOut.cs" />
     <Compile Include="Database\NextOfKinHistory.cs" />
     <Compile Include="HelpMethods.cs" />
-    <Compile Include="Migrations\202003112333141_FirstTry.cs" />
-    <Compile Include="Migrations\202003112333141_FirstTry.designer.cs">
-      <DependentUpon>202003112333141_FirstTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120009343_SecondTry.cs" />
-    <Compile Include="Migrations\202003120009343_SecondTry.designer.cs">
-      <DependentUpon>202003120009343_SecondTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120016040_ThirdTry.cs" />
-    <Compile Include="Migrations\202003120016040_ThirdTry.designer.cs">
-      <DependentUpon>202003120016040_ThirdTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120021053_FourthTry.cs" />
-    <Compile Include="Migrations\202003120021053_FourthTry.designer.cs">
-      <DependentUpon>202003120021053_FourthTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120023496_FifthTry.cs" />
-    <Compile Include="Migrations\202003120023496_FifthTry.designer.cs">
-      <DependentUpon>202003120023496_FifthTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120026400_SixthTry.cs" />
-    <Compile Include="Migrations\202003120026400_SixthTry.designer.cs">
-      <DependentUpon>202003120026400_SixthTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120052410_NinthTry.cs" />
-    <Compile Include="Migrations\202003120052410_NinthTry.designer.cs">
-      <DependentUpon>202003120052410_NinthTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120112146_EleventhTry.cs" />
-    <Compile Include="Migrations\202003120112146_EleventhTry.designer.cs">
-      <DependentUpon>202003120112146_EleventhTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120212477_16thTry.cs" />
-    <Compile Include="Migrations\202003120212477_16thTry.designer.cs">
-      <DependentUpon>202003120212477_16thTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120221477_17thTry.cs" />
-    <Compile Include="Migrations\202003120221477_17thTry.designer.cs">
-      <DependentUpon>202003120221477_17thTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120225519_18ThTRy.cs" />
-    <Compile Include="Migrations\202003120225519_18ThTRy.designer.cs">
-      <DependentUpon>202003120225519_18ThTRy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120239077_19thTry.cs" />
-    <Compile Include="Migrations\202003120239077_19thTry.designer.cs">
-      <DependentUpon>202003120239077_19thTry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003120954100_NyDagNyaMöjligheter.cs" />
-    <Compile Include="Migrations\202003120954100_NyDagNyaMöjligheter.designer.cs">
-      <DependentUpon>202003120954100_NyDagNyaMöjligheter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121001156_2ndTryDay2.cs" />
-    <Compile Include="Migrations\202003121001156_2ndTryDay2.designer.cs">
-      <DependentUpon>202003121001156_2ndTryDay2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121055349_HELVETE.cs" />
-    <Compile Include="Migrations\202003121055349_HELVETE.designer.cs">
-      <DependentUpon>202003121055349_HELVETE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121120519_FÖRIHELVETE.cs" />
-    <Compile Include="Migrations\202003121120519_FÖRIHELVETE.designer.cs">
-      <DependentUpon>202003121120519_FÖRIHELVETE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121124425_JAGBERTILLGUDATTDEFUNKARFÖRHELVETE.cs" />
-    <Compile Include="Migrations\202003121124425_JAGBERTILLGUDATTDEFUNKARFÖRHELVETE.designer.cs">
-      <DependentUpon>202003121124425_JAGBERTILLGUDATTDEFUNKARFÖRHELVETE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121131589_JAGBERTILLALLAJÄVLAGUDAR.cs" />
-    <Compile Include="Migrations\202003121131589_JAGBERTILLALLAJÄVLAGUDAR.designer.cs">
-      <DependentUpon>202003121131589_JAGBERTILLALLAJÄVLAGUDAR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121134532_Updatethisnow.cs" />
-    <Compile Include="Migrations\202003121134532_Updatethisnow.designer.cs">
-      <DependentUpon>202003121134532_Updatethisnow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121158269_snälla.cs" />
-    <Compile Include="Migrations\202003121158269_snälla.designer.cs">
-      <DependentUpon>202003121158269_snälla.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121208536_förfansenenenw.cs" />
-    <Compile Include="Migrations\202003121208536_förfansenenenw.designer.cs">
-      <DependentUpon>202003121208536_förfansenenenw.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121211076_ifene3nf.cs" />
-    <Compile Include="Migrations\202003121211076_ifene3nf.designer.cs">
-      <DependentUpon>202003121211076_ifene3nf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121820062_TestingAfterDinner.cs" />
-    <Compile Include="Migrations\202003121820062_TestingAfterDinner.designer.cs">
-      <DependentUpon>202003121820062_TestingAfterDinner.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121826119_NuBörjarDeSeLjusareUt.cs" />
-    <Compile Include="Migrations\202003121826119_NuBörjarDeSeLjusareUt.designer.cs">
-      <DependentUpon>202003121826119_NuBörjarDeSeLjusareUt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121900333_NyttFörsök.cs" />
-    <Compile Include="Migrations\202003121900333_NyttFörsök.designer.cs">
-      <DependentUpon>202003121900333_NyttFörsök.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121928276_Komigen.cs" />
-    <Compile Include="Migrations\202003121928276_Komigen.designer.cs">
-      <DependentUpon>202003121928276_Komigen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121930202_TestarNuigen1111.cs" />
-    <Compile Include="Migrations\202003121930202_TestarNuigen1111.designer.cs">
-      <DependentUpon>202003121930202_TestarNuigen1111.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121936497_fixatidentitypåcounselor.cs" />
-    <Compile Include="Migrations\202003121936497_fixatidentitypåcounselor.designer.cs">
-      <DependentUpon>202003121936497_fixatidentitypåcounselor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121940493_Tarbortcounsleor.cs" />
-    <Compile Include="Migrations\202003121940493_Tarbortcounsleor.designer.cs">
-      <DependentUpon>202003121940493_Tarbortcounsleor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121942564_LäggerinCounselorigen.cs" />
-    <Compile Include="Migrations\202003121942564_LäggerinCounselorigen.designer.cs">
-      <DependentUpon>202003121942564_LäggerinCounselorigen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003121950423_Nuskadegå!!.cs" />
-    <Compile Include="Migrations\202003121950423_Nuskadegå!!.designer.cs">
-      <DependentUpon>202003121950423_Nuskadegå!!.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003122010270_FixadeCounselor.cs" />
-    <Compile Include="Migrations\202003122010270_FixadeCounselor.designer.cs">
-      <DependentUpon>202003122010270_FixadeCounselor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003122018100_NuVerkarDeGåBättre.cs" />
-    <Compile Include="Migrations\202003122018100_NuVerkarDeGåBättre.designer.cs">
-      <DependentUpon>202003122018100_NuVerkarDeGåBättre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003122031573_NuigenGaah.cs" />
-    <Compile Include="Migrations\202003122031573_NuigenGaah.designer.cs">
-      <DependentUpon>202003122031573_NuigenGaah.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003122204058_DeSerBraUt.cs" />
-    <Compile Include="Migrations\202003122204058_DeSerBraUt.designer.cs">
-      <DependentUpon>202003122204058_DeSerBraUt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202003131102225_HistoryTablesAdded.cs" />
     <Compile Include="Migrations\202003131102225_HistoryTablesAdded.designer.cs">
       <DependentUpon>202003131102225_HistoryTablesAdded.cs</DependentUpon>
@@ -229,6 +88,10 @@
     <Compile Include="Migrations\202003132326293_UppdaterarUI.V1.2.designer.cs">
       <DependentUpon>202003132326293_UppdaterarUI.V1.2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003192247068_UppdateratTableHanteringen.cs" />
+    <Compile Include="Migrations\202003192247068_UppdateratTableHanteringen.designer.cs">
+      <DependentUpon>202003192247068_UppdateratTableHanteringen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PrintTextToConsole.cs" />
     <Compile Include="Program.cs" />
@@ -240,111 +103,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003112333141_FirstTry.resx">
-      <DependentUpon>202003112333141_FirstTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120009343_SecondTry.resx">
-      <DependentUpon>202003120009343_SecondTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120016040_ThirdTry.resx">
-      <DependentUpon>202003120016040_ThirdTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120021053_FourthTry.resx">
-      <DependentUpon>202003120021053_FourthTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120023496_FifthTry.resx">
-      <DependentUpon>202003120023496_FifthTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120026400_SixthTry.resx">
-      <DependentUpon>202003120026400_SixthTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120052410_NinthTry.resx">
-      <DependentUpon>202003120052410_NinthTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120112146_EleventhTry.resx">
-      <DependentUpon>202003120112146_EleventhTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120212477_16thTry.resx">
-      <DependentUpon>202003120212477_16thTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120221477_17thTry.resx">
-      <DependentUpon>202003120221477_17thTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120225519_18ThTRy.resx">
-      <DependentUpon>202003120225519_18ThTRy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120239077_19thTry.resx">
-      <DependentUpon>202003120239077_19thTry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003120954100_NyDagNyaMöjligheter.resx">
-      <DependentUpon>202003120954100_NyDagNyaMöjligheter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121001156_2ndTryDay2.resx">
-      <DependentUpon>202003121001156_2ndTryDay2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121055349_HELVETE.resx">
-      <DependentUpon>202003121055349_HELVETE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121120519_FÖRIHELVETE.resx">
-      <DependentUpon>202003121120519_FÖRIHELVETE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121124425_JAGBERTILLGUDATTDEFUNKARFÖRHELVETE.resx">
-      <DependentUpon>202003121124425_JAGBERTILLGUDATTDEFUNKARFÖRHELVETE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121131589_JAGBERTILLALLAJÄVLAGUDAR.resx">
-      <DependentUpon>202003121131589_JAGBERTILLALLAJÄVLAGUDAR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121134532_Updatethisnow.resx">
-      <DependentUpon>202003121134532_Updatethisnow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121158269_snälla.resx">
-      <DependentUpon>202003121158269_snälla.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121208536_förfansenenenw.resx">
-      <DependentUpon>202003121208536_förfansenenenw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121211076_ifene3nf.resx">
-      <DependentUpon>202003121211076_ifene3nf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121820062_TestingAfterDinner.resx">
-      <DependentUpon>202003121820062_TestingAfterDinner.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121826119_NuBörjarDeSeLjusareUt.resx">
-      <DependentUpon>202003121826119_NuBörjarDeSeLjusareUt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121900333_NyttFörsök.resx">
-      <DependentUpon>202003121900333_NyttFörsök.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121928276_Komigen.resx">
-      <DependentUpon>202003121928276_Komigen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121930202_TestarNuigen1111.resx">
-      <DependentUpon>202003121930202_TestarNuigen1111.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121936497_fixatidentitypåcounselor.resx">
-      <DependentUpon>202003121936497_fixatidentitypåcounselor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121940493_Tarbortcounsleor.resx">
-      <DependentUpon>202003121940493_Tarbortcounsleor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121942564_LäggerinCounselorigen.resx">
-      <DependentUpon>202003121942564_LäggerinCounselorigen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003121950423_Nuskadegå!!.resx">
-      <DependentUpon>202003121950423_Nuskadegå!!.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003122010270_FixadeCounselor.resx">
-      <DependentUpon>202003122010270_FixadeCounselor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003122018100_NuVerkarDeGåBättre.resx">
-      <DependentUpon>202003122018100_NuVerkarDeGåBättre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003122031573_NuigenGaah.resx">
-      <DependentUpon>202003122031573_NuigenGaah.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003122204058_DeSerBraUt.resx">
-      <DependentUpon>202003122204058_DeSerBraUt.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003131102225_HistoryTablesAdded.resx">
       <DependentUpon>202003131102225_HistoryTablesAdded.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003132326293_UppdaterarUI.V1.2.resx">
       <DependentUpon>202003132326293_UppdaterarUI.V1.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003192247068_UppdateratTableHanteringen.resx">
+      <DependentUpon>202003192247068_UppdateratTableHanteringen.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
